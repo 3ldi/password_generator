@@ -1,0 +1,44 @@
+
+{% extends 'passgenerator/layout.html' %}
+
+{% block body %}
+<div class="alert alert-primary">
+    <h2 class="alert-header">Select your options for the password.</h2>
+</div>
+    <div class="alert alert-secondary">
+        
+        <form action="{% url 'password' %} " method="get">
+        {% csrf_token %}
+
+            <label for"length">Length:</label>
+            <select class="form-select" name="length" id="length">
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>                
+                <option value="12" selected="selected">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+
+            <br>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="uppercase" name="uppercase">
+                <label class="form-check-label" for="uppercase">Uppercase</label>
+            </div>
+                <br>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="numbers" name="numbers">
+                <label class="form-check-label" for="numbers">Numbers</label>
+            </div>
+                <br>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="special" name="special">
+                <label class="form-check-label" for="special">Special Chars</label>
+            </div>
+                <br>
+                <input type="submit" value="Generate Password" class="btn btn-primary">
+        </form>
+</div>
+{% endblock %}

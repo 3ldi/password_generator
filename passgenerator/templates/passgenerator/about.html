@@ -1,0 +1,23 @@
+{% extends 'passgenerator/layout.html' %}
+
+{% block body %}
+    <h1>Password Generator</h1>
+    <h3>Create a strong password easily!</h3>
+    <article>
+        <p>This application creates a random password based on the user selections.</p>
+        <p>The user can select among these options, one or as many as the user prefers.</p>
+        <ul>
+            <li>length, range from 8 to 15 (default is 12)</li>
+            <li>uppercase letters</li>
+            <li>numbers</li>
+            <li>special chars</li>
+        </ul>
+
+        <p><strong>Note that lowercase are selceted by default</strong></p>
+
+
+    </article>
+    <br>
+    <br>
+    <a href="{% url 'home' %}" class="btn btn-warning">Go to Home page</a>
+{% endblock %}
