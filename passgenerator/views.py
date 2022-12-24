@@ -16,8 +16,8 @@ def about(request):
 
 # Create the password generator output page
 def password(request):
-    """Based on user selection the function will extend the lowercase list 
-        to include the list selected by the user"""
+    """Based on user selection the function will extend the lowercase 
+    list to include the list selected by the user"""
 
     characters = list('abcdefghijklmnopqrstuvwxyz')
     uppercase = list('QWERTYUIOPLKJHGFDSAZXCVBNM')
