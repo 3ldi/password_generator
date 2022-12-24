@@ -23,7 +23,7 @@ def password(request):
     # if user selected uppercase, add those to characters
     if request.GET.get('uppercase'):
         characters.extend(uppercase)
-    
+
     # if user selected special, add those to characters
     if request.GET.get('special'):
         characters.extend(special)
@@ -32,14 +32,12 @@ def password(request):
     if request.GET.get('numbers'):
         characters.extend(numbers)
 
-
     length = int(request.GET.get('length', 12))
 
     the_password = ''
 
     for char in range(length):
         the_password += random.choice(characters)
-
 
     return render(request, 'passgenerator/password.html', {
         'password': the_password
