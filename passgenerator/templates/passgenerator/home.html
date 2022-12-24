@@ -5,7 +5,7 @@
 <div class="alert alert-primary">
     <h2 class="alert-header">Select your options for the password.</h2>
 </div>
-    <div class="alert alert-secondary">
+    <div class="alert alert-info">
         
         <form action="{% url 'password' %} " method="get">
         {% csrf_token %}
@@ -38,7 +38,7 @@
                 <label class="form-check-label" for="special">Special Chars</label>
             </div>
                 <br>
-                <input type="submit" value="Generate Password" class="btn btn-primary">
+                <input type="submit" value="Generate Password" class="btn btn-dark">
         </form>
 </div>
 {% endblock %}
